@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/styles.css' %}">
+    <script src="https://kit.fontawesome.com/9d2f59ffae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="assets/images/proxy_form.png" class="logo">
+                <ul id="side-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#my-projects">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </div>
+
+
+<!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="{% static '/images/sTUdysmart.png' %}" alt="Description of the image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a hendrerit quam. Nam dignissim consectetur felis sit amet volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vehicula ultricies enim nec accumsan. Sed tristique urna dolor, eu ullamcorper justo eleifend nec. Mauris ut vestibulum diam, fermentum laoreet lacus. Quisque consequat lobortis ligula, vitae molestie metus sodales quis. Suspendisse condimentum, mauris sit amet consequat cursus, velit enim vestibulum dolor, in volutpat nisi lacus sed orci. Donec sit amet neque eu turpis vehicula laoreet et ullamcorper dolo </p>
+
+                    <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Web Development</li>
+                            <li><span>Mobile app</span><br>Mobile Applications Development</li>
+                            <li><span>AI</span><br>Customization of AI</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - current</span><br>Web Dev at Smart Nairobi</li>
+                            <li><span>2022-2023</span><br>TUM Coder's club</li>
+                            <li><span>2021-2022</span><br>Freelance developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2024</span><br>Computer Science</li>
+                            <li><span>2023-2024</span><br>Software Engineering</li>
+                            <li><span>2016-2019</span><br>High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------- Services  ------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h2>Mobile Development</h2>
+                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-gears"></i>
+                    <h2>Artificial Intelligence</h2>
+                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- My projects -->
+
+    <div id="my-projects">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="{% static 'images/work1.jpeg' %}" alt="Description of the image">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>This is an amazing application that connects skilled individuals globally</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{% static 'images/work2.jpeg' %}" alt="">
+                    <div class="layer">
+                        <h3>Africart Express</h3>
+                        <p>This is an amazing application that connects skilled individuals globally</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{% static '/images/work3.jpeg' %}" alt="">
+                    <div class="layer">
+                        <h3>Mobile App</h3>
+                        <p>This is an amazing application that connects skilled individuals globally</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+ 
+    <!--------------------Contact------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-flip"></i>0795523526</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <a href="assets/images/Peter_Oenga.Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Yor name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-solid fa-heart"></i>Peter_Oenga</p>
+        </div>
+    </div>
+   <script>
+    
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabContents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tablename).classList.add("active-tab");
+                
+                var tablinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabContents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tablename).classList.add("active-tab");
+                
+                
+            }          
+            } 
+
+   </script>
+   <script>
+    var sidemenu = document.getElementById("side-menu")
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+   </script>
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+
+   </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzXWxRORYqXRm7egJkPupFwlffA8zxevfjuJ93_9KnjlIE0R5EhL6v5erF6x3tNyfC-/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent succesfully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
