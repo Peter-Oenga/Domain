@@ -1,234 +1,650 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static '/styles.css' %}">
-    <script src="https://kit.fontawesome.com/9d2f59ffae.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="assets/images/proxy_form.png" class="logo">
-                <ul id="side-menu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#my-projects">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Software Engineer</p>
-            </div>
-        </div>
-    </div>
+{% extends 'base.html' %}
 
 
-<!-- About -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="{% static '/images/sTUdysmart.png' %}" alt="Description of the image">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a hendrerit quam. Nam dignissim consectetur felis sit amet volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vehicula ultricies enim nec accumsan. Sed tristique urna dolor, eu ullamcorper justo eleifend nec. Mauris ut vestibulum diam, fermentum laoreet lacus. Quisque consequat lobortis ligula, vitae molestie metus sodales quis. Suspendisse condimentum, mauris sit amet consequat cursus, velit enim vestibulum dolor, in volutpat nisi lacus sed orci. Donec sit amet neque eu turpis vehicula laoreet et ullamcorper dolo </p>
 
-                    <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Web Developer</span><br>Web Development</li>
-                            <li><span>Mobile app</span><br>Mobile Applications Development</li>
-                            <li><span>AI</span><br>Customization of AI</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2023 - current</span><br>Web Dev at Smart Nairobi</li>
-                            <li><span>2022-2023</span><br>TUM Coder's club</li>
-                            <li><span>2021-2022</span><br>Freelance developer</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2020-2024</span><br>Computer Science</li>
-                            <li><span>2023-2024</span><br>Software Engineering</li>
-                            <li><span>2016-2019</span><br>High School</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{% block content %}
+  <body>
+   
 
-    <!--------------- Services  ------------------->
 
-    <div id="services">
-        <div class="container">
-            <h1 class="subtitle">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
-                    <a href="#">Learn more</a>
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    <h2>Mobile Development</h2>
-                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
-                    <a href="#">Learn more</a>
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-gears"></i>
-                    <h2>Artificial Intelligence</h2>
-                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- My projects -->
-
-    <div id="my-projects">
-        <div class="container">
-            <h1 class="subtitle">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="{% static 'images/work1.jpeg' %}" alt="Description of the image">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>This is an amazing application that connects skilled individuals globally</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="{% static 'images/work2.jpeg' %}" alt="">
-                    <div class="layer">
-                        <h3>Africart Express</h3>
-                        <p>This is an amazing application that connects skilled individuals globally</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="{% static '/images/work3.jpeg' %}" alt="">
-                    <div class="layer">
-                        <h3>Mobile App</h3>
-                        <p>This is an amazing application that connects skilled individuals globally</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">See more</a>
-        </div>
-    </div>
-
- 
-    <!--------------------Contact------------------->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
-                    <p><i class="fa-solid fa-phone-flip"></i>0795523526</p>
-                    <div class="social-icons">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-x-twitter"></i></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></i></a>
-                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-                    <a href="assets/images/Peter_Oenga.Resume.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Yor name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p><i class="fa-solid fa-heart"></i>Peter_Oenga</p>
-        </div>
-    </div>
-   <script>
     
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabContents = document.getElementsByClassName("tab-contents");
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link");
-                }
-                for(tabcontent of tabContents){
-                    tabcontent.classList.remove("active-tab");
-                }
-                event.currentTarget.classList.add("active-link")
-                document.getElementById(tablename).classList.add("active-tab");
-                
-                var tablinks = document.getElementsByClassName("tab-links");
-            var tabContents = document.getElementsByClassName("tab-contents");
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link");
-                }
-                for(tabcontent of tabContents){
-                    tabcontent.classList.remove("active-tab");
-                }
-                event.currentTarget.classList.add("active-link")
-                document.getElementById(tablename).classList.add("active-tab");
-                
-                
-            }          
-            } 
+<!-- Carousel Start -->
+<div class="container-fluid px-0" style="margin-top: -24px">
+  <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+    `
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img
+          src="/static/images/students.jpg"
+          class="img-fluid"
+          alt="First slide"
+        />
+        <div class="carousel-caption">
+          <div class="container carousel-content">
+            <h1 class="text-white display-1 mb-4 animated fadeInRight">
+              Elevating Your Excellence
+            </h1>
+            <p class="mb-4 text-white fs-5 animated fadeInDown">
+              Crafting cutting-edge software solutions that push the boundaries
+              of innovation. Join us to unlock the full potential of your
+              digital vision.
+            </p>
+            <a
+              href="/about/"
+              class="me-2 d-block d-sm-inline-block mb-2 mb-sm-0"
+              ><button
+                type="button"
+                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft"
+              >
+                Read More
+              </button></a
+            >
+            <a href="/contact" class="ms-2 d-block d-sm-inline-block"
+              ><button
+                type="button"
+                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight"
+              >
+                Contact Us
+              </button></a
+            >
+            <a href="https://wa.me/254795523526/?text=Hello%20I%20am%20interested%20in%20your%20services" target="_blank">Send us a WhatsApp message</a>
 
-   </script>
-   <script>
-    var sidemenu = document.getElementById("side-menu")
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
 
-   </script>
-   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+          </div>
+        </div>
+      </div>
 
-   </script>
+      <div class="carousel-item">
+        <img
+          src="/static/images/image2.jpg"
+          class="img-fluid"
+          alt="Second slide"
+        />
+        <div class="carousel-caption">
+          <div class="container carousel-content">
+            <h1 class="text-white display-1 mb-4 animated fadeInLeft">
+              Unleash Your Full Potential
+            </h1>
+            <p class="mb-4 text-white fs-5 animated fadeInDown">
+              Our team ensures your projects are not just code but a reflection
+              of reliability and quality. We transform ideas into robust
+              software.
+            </p>
+            <a
+              href="/about/"
+              class="me-2 d-block d-sm-inline-block mb-2 mb-sm-0"
+              ><button
+                type="button"
+                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft"
+              >
+                Read More
+              </button></a
+            >
+            <a href="/contact" class="ms-2 d-block d-sm-inline-block"
+              ><button
+                type="button"
+                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight"
+              >
+                Contact Us
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      
+              href="/about/"
+              class="me-2 d-block d-sm-inline-block mb-2 mb-sm-0"
+              ><button
+                type="button"
+                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft"
+              >
+                Read More
+              </button></a
+            >
+            <a href="/contact" class="ms-2 d-block d-sm-inline-block"
+              ><button
+                type="button"
+                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight"
+              >
+                Contact Us
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselId"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselId"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Fact Start -->
+<div class="container-fluid bg-secondary py-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 wow fadeIn" data-wow-delay=".1s">
+        <div class="d-flex counter">
+          <h1 class="me-3 text-primary">
+            <span class="counter-value">99</span>%
+          </h1>
+          <h5 class="text-white mt-1">Success in getting customer happy</h5>
+        </div>
+      </div>
+      <div class="col-lg-3 wow fadeIn" data-wow-delay=".3s">
+        <div class="d-flex counter">
+          <h1 class="me-3 text-primary counter-value">25</h1>
+          <h5 class="text-white mt-1">
+            Thousand businesses completed successfully
+          </h5>
+        </div>
+      </div>
+      <div class="col-lg-3 wow fadeIn" data-wow-delay=".5s">
+        <div class="d-flex counter">
+          <h1 class="me-3 text-primary counter-value">120</h1>
+          <h5 class="text-white mt-1">
+            Total clients who love StudySmart
+          </h5>
+        </div>
+      </div>
+      <div class="col-lg-3 wow fadeIn" data-wow-delay=".7s">
+        <div class="d-flex counter">
+          <h1 class="me-3 text-primary counter-value">5</h1>
+          <h5 class="text-white mt-1">
+            Stars reviews given by satisfied clients
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fact End -->
+
+<!-- About Start -->
+<div class="container-fluid py-5 my-5">
+  <div class="container pt-5">
+    <div class="row g-5">
+      <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+        <div class="h-100 position-relative">
+          <img
+            src="/static/images/about-2.jpg"
+            class="img-fluid w-75 rounded"
+            alt=""
+            style="margin-bottom: 25%"
+          />
+          <div class="position-absolute w-75" style="top: 35%; left: 25%">
+            <img
+              src="/static/images/about-3.jpg"
+              class="img-fluid w-100 rounded"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+        <h5 class="text-primary">About Us</h5>
+        <h1 class="mb-4">
+          About StudySmart And It's Innovative IT Solutions
+        </h1>
+        <p>
+            StudySmart is dedicated to providing high-quality academic assistance to students at all levels. Whether you're struggling with complex topics, need help with assignments, or looking to excel in your studies, we're here to support you. Our services span a wide range of subjects, including Economics, Finance, Data Analysis, Business Analytics, Computer Science, and more. Our team of experts is committed to your academic success, offering personalized tutoring, comprehensive study materials, and insightful guides. Join us at StudySmart and take the first step towards achieving your academic goals. Explore our subjects below to get started..
+        </p>
+
+        <p class="mb-4">
+          Whether you're an entrepreneur with a bold vision, a techpreneur
+          seeking to innovate, or an organization striving for excellence, Study
+          Smart is here to help you realize your ambitions.
+        </p>
+
+        <div class="text-center">
+          <a
+            href="/about/"
+            class="btn btn-secondary rounded-pill px-5 py-3 text-white"
+            >More Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+
+<!-- Services Start -->
+<div id="services" class="container-fluid services py-5 mb-5">
+  <div class="container">
+    <div
+      class="text-center mx-auto pb-5 wow fadeIn"
+      data-wow-delay=".3s"
+      style="max-width: 600px"
+    >
+      <h5 class="text-primary">Our Services</h5>
+      <h1>Services Built Specifically For Your Business</h1>
+    </div>
+    <div class="row g-5 services-inner">
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/computer_science.jpg" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Computer Science</h4>
+              <p class="mb-4">
+                Explore the world of Computer Science and unlock academic excellence.From mastering programming languages like Python, Java, and C++ to advanced software and web development, database management and algorithm design, we provide comprehensive support for your projects.
+              </p>
+              <a
+                href="{% url 'cs' %}"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/machine_learning1.jpg" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Machine Learning</h4>
+              <p class="mb-4">
+                Elevate your academic journey in Machine Learning with our expert services. Dive into machine learning using Python and R, enhance your data analysis skills, and advance your projects and research. We’re here to guide you to academic excellence in the ever-evolving field of Machine Learning.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/data_analysis.jpg" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Data Analysis</h4>
+              <p class="mb-4">
+                Achieve academic excellence in Data Analysis with our expert services. We specialize in SPSS, STATA, R, and Python, offering top-notch data visualization and research reviews. Benefit from our comprehensive support for reports and analysis using Jamovi and other advanced tools.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/economics.jpg" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Economics</h4>
+              <p class="mb-4">
+                Achieve academic excellence in Economics with our expert services. From econometrics and macroeconomics to microeconomics and international trade, we offer guidance in statistical analysis and crafting insightful economic essays and reports to elevate your understanding and performance.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/data_mining.png" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Data Mining</h4>
+              <p class="mb-4">
+                Achieve academic excellence in Data Mining with our expert services. Harness the power of WEKA and Orange for insightful data analysis, or utilize Python and R for advanced data mining techniques. We support your projects and research to drive impactful results.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/finance.jpg" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Finance</h4>
+              <p class="mb-4">
+                Embark on a journey to academic excellence in Finance with our tailored services. Explore corporate finance, investment analysis, and financial markets, while honing your skills in financial modeling and risk management. We offer expert support for reports and financial essays to elevate your understanding.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <!-- <i class="fas fa-laptop-code fa-7x mb-4 text-primary"></i> -->
+              <img src="/static/images/business_analytics.jpg" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Business Analytics</h4>
+              <p class="mb-4">
+                Harness the power of Business Analytics to drive success. Our expertise in Business Intelligence, Data Analytics, and Predictive Analytics, coupled with tools like Power BI and Tableau, ensures insightful reports and case studies to guide your strategic decisions and optimize performance.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/case_study.jpg" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Case Studies</h4>
+              <p class="mb-4">
+                Dive into our diverse range of Case Studies, including Business, Management, Marketing, and Economics. Our detailed reports provide valuable insights and practical solutions, offering a comprehensive analysis to enhance your understanding and drive strategic decisions.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/reports.jpeg" alt="Business Analytics" class="img-fluid mb-4" >
+              <h4 class="mb-3">Reports</h4>
+              <p class="mb-4">
+                Enhance your academic and professional success with our expert report services. We specialize in crafting detailed research, business, technical, project, and academic reports, ensuring clarity and precision in every document. Trust us to deliver insights and analysis tailored to your needs.
+              </p>
+              <a
+                href="{% url 'reports' %}"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/business.jpg" alt="Business " class="img-fluid mb-4" >
+              <h4 class="mb-3">Business</h4>
+              <p class="mb-4">
+                Elevate your business with our expert services. Whether you're focusing on Business Management, Entrepreneurship, or Business Strategy, we provide tailored support in Operations Management, Business Plans, and comprehensive reports to drive your success and growth.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+        <div class="services-item bg-light">
+          <div class="p-4 text-center services-content">
+            <div class="services-content-icon">
+              <img src="/static/images/marketing.jpg" alt="Marketing" class="img-fluid mb-4" >
+              <h4 class="mb-3">Marketing</h4>
+              <p class="mb-4">
+                Elevate your brand with our expert marketing services. We offer strategic marketing solutions, digital marketing expertise, and in-depth market research. Understand consumer behavior, enhance your approach with detailed reports, and analyze successful case studies to drive your business forward.
+              </p>
+              <a
+                href="services"
+                class="btn btn-secondary text-white px-5 py-3 rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- Services End -->
+
+
+<!-- Testimonial Start -->
+<div class="container-fluid testimonial py-5 my-5">
+    <div class="container py-5">
+  
+      <!-- Title Section -->
+      <div
+        class="text-center mx-auto pb-5 wow fadeIn"
+        data-wow-delay=".3s"
+        style="max-width: 600px"
+      >
+        <h1>What Our Clients Say</h1>
+      </div>
+  
+      <!-- Owl Carousel for Testimonials -->
+      <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay=".5s">
+        
+        <!-- Testimonial Item 1 -->
+        <div class="testimonial-item border p-4">
+          <div class="d-flex align-items-center">
+            <div class="testimonial-img">
+              <img src="/static/img/testimonial-1.jpg" alt="Fatmak" />
+            </div>
+            <div class="ms-4">
+              <h4 class="text-secondary">Fatmak Pro Consultancy</h4>
+              <p class="m-0 pb-3">Consultancy Agency</p>
+              <div class="d-flex pe-5">
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+              </div>
+            </div>
+          </div>
+          <div class="border-top mt-4 pt-3">
+            <p class="mb-0">
+              StudySmart delivered high-quality software on time and within
+              budget. Their expertise is unmatched, and I highly recommend them.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Testimonial Item 2 -->
+        <div class="testimonial-item border p-4">
+          <div class="d-flex align-items-center">
+            <div class="testimonial-img">
+              <img src="/static/img/testimonial-2.jpg" alt="Ali" />
+            </div>
+            <div class="ms-4">
+              <h4 class="text-secondary">Blood Donation System</h4>
+              <p class="m-0 pb-3">Ali ~Graduate</p>
+              <div class="d-flex pe-5">
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+              </div>
+            </div>
+          </div>
+          <div class="border-top mt-4 pt-3">
+            <p class="mb-0">
+              Thank you for your invaluable assistance in elucidating my project.
+              Your adept approach simplified complexities and rekindled my
+              appreciation.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Testimonial Item 3 -->
+        <div class="testimonial-item border p-4">
+          <div class="d-flex align-items-center">
+            <div class="testimonial-img">
+              <img src="/static/img/testimonial-3.jpg" alt="Dozmor" />
+            </div>
+            <div class="ms-4">
+              <h4 class="text-secondary">Dozmor Clinic</h4>
+              <p class="m-0 pb-3">Depression And Traumatic Clinic</p>
+              <div class="d-flex pe-5">
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+              </div>
+            </div>
+          </div>
+          <div class="border-top mt-4 pt-3">
+            <p class="mb-0">
+              StudySmart took our outdated systems and transformed them
+              into a modern, efficient solution. The results speak for themselves.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Testimonial Item 4 -->
+        <div class="testimonial-item border p-4">
+          <div class="d-flex align-items-center">
+            <div class="testimonial-img">
+              <img src="/static/img/testimonial-4.jpg" alt="MakeIAM" />
+            </div>
+            <div class="ms-4">
+              <h4 class="text-secondary">Make I AM</h4>
+              <p class="m-0 pb-3">Upcoming Kenyan Music Artist</p>
+              <div class="d-flex pe-5">
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+                <i class="fas fa-star me-1 text-primary"></i>
+              </div>
+            </div>
+          </div>
+          <div class="border-top mt-4 pt-3">
+            <p class="mb-0">
+              Found traffic to my youtube channel a few weeks after the good job.
+              You always talk of coffee so I will buy you one when we meet in
+              person.
+            </p>
+          </div>
+        </div>
+  
+      </div> <!-- End of owl-carousel -->
+  
+    </div>
+  </div>
+  <!-- Testimonial End -->
+  
+  
+
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"
+      ><i class="fa fa-arrow-up text-white"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/lib/wow/wow.min.js"></script>
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+<!-- This is the Corousel code for the Testimonial -->
+<!-- Include Owl Carousel JS and CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzXWxRORYqXRm7egJkPupFwlffA8zxevfjuJ93_9KnjlIE0R5EhL6v5erF6x3tNyfC-/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent succesfully!"
-            setTimeout(function(){
-                msg.innerHTML=""
-            }, 5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-</body>
-</html>
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+});
+</script>
+
+<!-- Whatsapp Message -->
+
+
+{%endblock%}
