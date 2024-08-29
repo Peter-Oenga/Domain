@@ -5,7 +5,7 @@ from .forms import RegistrationForm
 # Create your views here.
 
 def index(request):
-    return render(request, "index.html", {})
+    return render(request, "index.html")
 
 
 def about(request):
@@ -32,3 +32,35 @@ def reports(request):
 
 def cs(request):
     return render(request, 'cs.html')
+
+
+
+def ml(request):
+    return render(request, 'ml.html')
+
+
+def data_analysis(request):
+    return render(request, 'data_analysis.html')
+
+
+def economics(request):
+    return render(request, 'economics.html')
+
+def data_mining(request):
+    return render(request, 'data_mining.html')
+
+
+def finance(request):
+    return render(request, 'finance.html')
+
+def business_analytics(request):
+    return render(request, 'business_analytics.html')
+
+def case_studies(request):
+    return render(request, 'case_studies.html')
+
+def business(request):
+    return render(request, 'business.html')
+
+def marketing(request):
+    return render(request, 'marketing.html')

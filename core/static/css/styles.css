@@ -317,41 +317,61 @@ p{
 
 
 /*** Services Start ***/
-
-/* Ensure smooth scaling effect */
-.services-content-icon img {
-    height: 200px; /* Adjust height as needed */
-    width: auto;   /* Maintain aspect ratio */
-    margin-bottom: 1.5rem; /* Spacing below image */
-    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+p {
+    font-size: 19px;
 }
-
-.services-content-icon img:hover {
-    transform: scale(1.1); /* Scale image up by 10% on hover */
-}
-
-/* Ensure background color changes on hover */
-.services-item {
+.services .services-item {
     box-shadow: 0 0 60px rgba(0, 0, 0, .2);
     width: 100%;
     height: 100%;
     border-radius: 10px;
     padding: 10px 0;
     position: relative;
-    overflow: hidden;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
 }
 
-.services-item:hover {
-    background-color: rgba(3, 43, 243, 0.8); /* Blue background on hover */
-    color: white; /* Ensures text is readable */
+
+.services-content::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background: rgba(3, 43, 243, 0.8);
+    transition: .5s;
 }
 
-.services-item:hover h4,
-.services-item:hover p,
-.services-item:hover a {
-    color: white; /* Change text color to white on hover */
+.services-content::after {
+    top: 0;
+    bottom: auto;
+    border-radius: 10px 10px 10px 10px;
 }
+
+.services-item:hover .services-content::after {
+    height: 100%;
+    opacity: 1;
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.services-item .services-content-icon i,
+.services-item .services-content-icon p {
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon i {
+    color: var(--bs-secondary) !important;
+}
+
+.services-item:hover .services-content-icon p {
+    color: var(--bs-white);
+}
+
 
 
 /*** Project Start ***/
@@ -671,3 +691,1126 @@ p{
 .btn-whatsapp:hover {
     background-color: #128C7E; /* Darker green for hover effect */
 }
+
+
+
+/* The Machine Learning Page */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Machine Learning Section */
+.ml-section {
+    background: linear-gradient(135deg, #4CAF50, #2C6E49);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.ml-content {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.ml-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ml-description {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ml-title {
+        font-size: 2em;
+    }
+
+    .ml-description {
+        font-size: 1.1em;
+    }
+}
+
+
+/* Data Analysis */
+
+/* Reset styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.data-analysis-section {
+    position: relative;
+    width: 100%;
+    padding: 60px 20px;
+    background: url('{% static "images/data_analysis_bg.jpg" %}') no-repeat center center/cover;
+    color: #333; /* Dark text for better readability */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Light overlay for improved text visibility */
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50; /* Dark blue-gray for title */
+}
+
+.section-description {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #555; /* Medium gray for description */
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.service-item, .resources-item {
+    background: rgba(255, 255, 255, 0.9); /* Lighter background for text clarity */
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    text-align: left;
+    color: #333; /* Dark text color */
+}
+
+.service-item h2, .resources-item h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #2c3e50; /* Consistent title color */
+}
+
+.service-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.service-item ul li, .resources-item p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555; /* Medium gray for list items and text */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #2980b9; /* Strong blue for the call-to-action button */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1c639b; /* Darker blue on hover */
+}
+
+
+/* Computer Science Section */
+
+/* General container */
+.content-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Background Image Section */
+.background-section {
+    /* background: url('/static/images/background-image.jpg') no-repeat center center; */
+    background-image: url('/static/images/cs_back.jpg');
+    background-size: cover;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+    min-height: 400px;
+}
+
+.background-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.background-title {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px white(0, 0, 0, 0.7);
+}
+
+.background-description {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #444;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+.services-title {
+    font-size: 2.8em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-subtitle {
+    font-size: 2em;
+    color: #ddd;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.services-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 8px;
+}
+
+.services-item-title {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.services-item-description {
+    color: #ccc;
+}
+
+/* Resources Section */
+
+
+/* Contact Section */
+.economics-section {
+    position: relative;
+    width: 100%;
+    padding: 60px 20px;
+    background: url('{% static "/images/economics.jpg" %}') no-repeat center center/cover; /* Background image for the section */
+    color: #333;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Light overlay for better readability */
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.section-description {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.service-item, .resources-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #333;
+}
+
+.service-item h2, .resources-item h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.service-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.service-item ul li, .resources-item p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #2980b9;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1c639b;
+}
+
+
+/* Data   Mining section */
+
+#data-mining-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* White background */
+}
+
+#data-mining-header-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#data-mining-title {
+    font-size: 3em;
+    color: #007bff; /* Bright Blue */
+}
+
+#data-mining-description {
+    font-size: 1.2em;
+    color: #555555; /* Medium Gray */
+    max-width: 800px;
+    margin: 20px auto;
+    font-weight: 600; /* Increased Font Weight */
+}
+
+#data-mining-services-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.data-mining-service-card, .data-mining-resources-card {
+    background-color: #f8f9fa; /* Lightest Gray */
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-mining-service-title, .data-mining-resources-title {
+    font-size: 2em;
+    color: #007bff; /* Bright Blue */
+    margin-bottom: 15px;
+}
+
+.data-mining-service-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.data-mining-service-list li, .data-mining-resources-description {
+    font-size: 1.1em;
+    color: #333333; /* Dark Gray */
+    margin-bottom: 10px;
+}
+
+#data-mining-cta-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.data-mining-cta-button {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: #ffffff; /* White */
+    background-color: #28a745; /* Bright Green */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.data-mining-cta-button:hover {
+    background-color: #218838; /* Darker Green on hover */
+}
+
+
+/* Start of the Finance section */
+
+
+#finance-section {
+    padding: 60px 20px;
+    background: #ecf0f1; /* Light Gray */
+    color: #2c3e50; /* Dark Blue Gray */
+}
+
+#intro-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.intro-title {
+    font-size: 3em;
+    color: #3498db; /* Bright Blue */
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Reduced gap to make space more compact */
+}
+
+.services-box, .resources-box {
+    flex: 1;
+    max-width: 100%; /* Full width on smaller screens */
+}
+
+.services-box {
+    background-color: #ffffff; /* White Background */
+    border-radius: 15px;
+    padding: 30px; /* Increased padding for more space inside */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Add space below the service box */
+}
+
+.resources-box {
+    background-color: #ffffff; /* White Background */
+    border-radius: 15px;
+    padding: 30px; /* Increased padding for more space inside */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading {
+    font-size: 2.2em;
+    color: #2ecc71; /* Bright Green */
+    margin-bottom: 20px;
+}
+
+.services-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.services-list li, .resources-text {
+    font-size: 1.1em;
+    color: #34495e; /* Darker Gray */
+    margin-bottom: 12px;
+}
+
+#cta-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffffff; /* White */
+    background-color: #e67e22; /* Bright Orange */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #d35400; /* Darker Orange on hover */
+}
+/* End of finance section */
+
+
+/* Start of the Business Analytics Section */
+#business-analytics-section {
+    padding: 60px 20px;
+    background: #f8f9fa; /* Light Background */
+    color: #2c3e50; /* Dark Blue Gray */
+}
+
+#intro-container {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.intro-heading {
+    font-size: 3em;
+    color: #3498db; /* Bright Blue */
+    margin-bottom: 20px;
+}
+
+.intro-description {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-box, .resource-box {
+    flex: 1;
+    max-width: 100%; /* Full width on smaller screens */
+}
+
+.service-box {
+    background-color: #ffffff; /* White Background */
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Spacing between sections */
+}
+
+.resource-box {
+    background-color: #ffffff; /* White Background */
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-heading, .resource-heading {
+    font-size: 2.2em;
+    color: #27ae60; /* Bright Green */
+    margin-bottom: 20px;
+}
+
+.service-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-list li, .resource-description {
+    font-size: 1.1em;
+    color: #34495e; /* Darker Gray */
+    margin-bottom: 12px;
+}
+
+#cta-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffffff; /* White */
+    background-color: #e67e22; /* Bright Orange */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #d35400; /* Darker Orange on hover */
+}
+
+
+/* End of the Business Analytics section */
+
+
+/* Start of the Case Studies */
+
+#case-studies-section {
+    padding: 60px 20px;
+    background: #f4f6f9; /* Very Light Gray */
+    color: #2c3e50; /* Dark Blue Gray */
+}
+
+#intro-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.intro-heading {
+    font-size: 3em;
+    color: #2980b9; /* Bright Blue */
+    margin-bottom: 20px;
+}
+
+.intro-description {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#case-studies-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.case-study-box, .insights-box {
+    flex: 1;
+    max-width: 100%; /* Full width on smaller screens */
+}
+
+.case-study-box {
+    background-color: #ffffff; /* White Background */
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Spacing between sections */
+}
+
+.insights-box {
+    background-color: #ffffff; /* White Background */
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.case-study-heading, .insights-heading {
+    font-size: 2.2em;
+    color: #27ae60; /* Bright Green */
+    margin-bottom: 20px;
+}
+
+.case-study-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.case-study-list li, .insights-description {
+    font-size: 1.1em;
+    color: #34495e; /* Darker Gray */
+    margin-bottom: 12px;
+}
+
+#cta-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffffff; /* White */
+    background-color: #e67e22; /* Bright Orange */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #d35400; /* Darker Orange on hover */
+}
+
+/* End of the Case Studies */
+
+
+/* Reports section */
+
+.reports-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light Gray */
+}
+
+/* Introduction Section */
+#reports-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#reports-intro .reports-intro-heading {
+    font-size: 2.5em;
+    color: #2c3e50; /* Dark Blue Gray */
+    margin-bottom: 20px;
+}
+
+#reports-intro .reports-intro-description {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Gray */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#reports-services {
+    background-color: #ffffff; /* White */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#reports-services .reports-services-heading {
+    font-size: 2.2em;
+    color: #2980b9; /* Bright Blue */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#reports-services .reports-services-subheading {
+    font-size: 1.6em;
+    color: #34495e; /* Darker Blue Gray */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#reports-services .reports-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#reports-services .reports-service-card {
+    flex: 1 1 calc(30% - 20px);
+    background-color: #ecf0f1; /* Light Gray */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+}
+
+#reports-services .reports-service-title {
+    font-size: 1.3em;
+    color: #2980b9; /* Bright Blue */
+    margin-bottom: 10px;
+}
+
+#reports-services .reports-service-description {
+    font-size: 1.1em;
+    color: #7f8c8d; /* Gray */
+}
+
+/* Resources Section */
+#reports-resources {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#reports-resources .reports-resources-heading {
+    font-size: 2.2em;
+    color: #27ae60; /* Bright Green */
+    margin-bottom: 20px;
+}
+
+#reports-resources .reports-resources-description {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Gray */
+}
+
+/* End of Reports Section */
+
+/* Business Section */
+.business-container {
+    padding: 20px;
+    background-color: #f0f4f8; /* Light Blue Gray */
+}
+
+/* Introduction Section */
+#business-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#business-intro .business-intro-heading {
+    font-size: 2.5em;
+    color: #2c3e50; /* Dark Blue Gray */
+    margin-bottom: 20px;
+}
+
+#business-intro .business-intro-description {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Gray */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#business-services {
+    background-color: #ffffff; /* White */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#business-services .business-services-heading {
+    font-size: 2.2em;
+    color: #3498db; /* Bright Blue */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#business-services .business-services-subheading {
+    font-size: 1.6em;
+    color: #34495e; /* Darker Blue Gray */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#business-services .business-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#business-services .business-service-card {
+    flex: 1 1 calc(30% - 20px);
+    background-color: #ecf0f1; /* Light Gray */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+}
+
+#business-services .business-service-title {
+    font-size: 1.3em;
+    color: #3498db; /* Bright Blue */
+    margin-bottom: 10px;
+}
+
+#business-services .business-service-description {
+    font-size: 1.1em;
+    color: #7f8c8d; /* Gray */
+}
+
+/* Contact Section */
+#business-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#business-cta .business-cta-heading {
+    font-size: 2.2em;
+    color: #27ae60; /* Bright Green */
+    margin-bottom: 20px;
+}
+
+#business-cta .business-cta-description {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Gray */
+    margin-bottom: 20px;
+}
+
+#business-cta .business-cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #e74c3c; /* Bright Red */
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#business-cta .business-cta-button:hover {
+    background-color: #c0392b; /* Darker Red */
+}
+
+/* End business */
+
+
+/* Start Of Marketing */
+.marketing-container {
+    padding: 20px;
+    background-color: #eaf4f4; /* Light Cyan */
+}
+
+/* Introduction Section */
+#marketing-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#marketing-intro .marketing-intro-heading {
+    font-size: 2.5em;
+    color: #2c3e50; /* Dark Blue Gray */
+    margin-bottom: 20px;
+}
+
+#marketing-intro .marketing-intro-description {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Gray */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#marketing-services {
+    background-color: #ffffff; /* White */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#marketing-services .marketing-services-heading {
+    font-size: 2.2em;
+    color: #16a085; /* Teal */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#marketing-services .marketing-services-subheading {
+    font-size: 1.6em;
+    color: #34495e; /* Darker Blue Gray */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#marketing-services .marketing-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#marketing-services .marketing-service-card {
+    flex: 1 1 calc(30% - 20px);
+    background-color: #f9f9f9; /* Light Gray */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+}
+
+#marketing-services .marketing-service-title {
+    font-size: 1.3em;
+    color: #16a085; /* Teal */
+    margin-bottom: 10px;
+}
+
+#marketing-services .marketing-service-description {
+    font-size: 1.1em;
+    color: #7f8c8d; /* Gray */
+}
+
+/* Contact Section */
+#marketing-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#marketing-cta .marketing-cta-heading {
+    font-size: 2.2em;
+    color: #e67e22; /* Carrot Orange */
+    margin-bottom: 20px;
+}
+
+#marketing-cta .marketing-cta-description {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Gray */
+    margin-bottom: 20px;
+}
+
+#marketing-cta .marketing-cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #3498db; /* Bright Blue */
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#marketing-cta .marketing-cta-button:hover {
+    background-color: #2980b9; /* Darker Blue */
+}
+
+/* End of Marketing */
+
+/* Start Of Machine Learning */
+
+.machine-learning-container {
+    padding: 20px;
+    background-color: #f0f8ff; /* Alice Blue */
+}
+
+/* Introduction Section */
+#ml-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#ml-intro .ml-intro-heading {
+    font-size: 2.5em;
+    color: #2c3e50; /* Dark Blue Gray */
+    margin-bottom: 20px;
+}
+
+#ml-intro .ml-intro-description {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Gray */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#ml-services {
+    background-color: #ffffff; /* White */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#ml-services .ml-services-heading {
+    font-size: 2.2em;
+    color: #2980b9; /* Bright Blue */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#ml-services .ml-services-subheading {
+    font-size: 1.6em;
+    color: #34495e; /* Darker Blue Gray */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#ml-services .ml-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#ml-services .ml-service-card {
+    flex: 1 1 calc(30% - 20px);
+    background-color: #eaf2f8; /* Light Blue */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+}
+
+#ml-services .ml-service-title {
+    font-size: 1.3em;
+    color: #2980b9; /* Bright Blue */
+    margin-bottom: 10px;
+}
+
+#ml-services .ml-service-description {
+    font-size: 1.1em;
+    color: #7f8c8d; /* Gray */
+}
+
+/* Contact Section */
+#ml-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#ml-cta .ml-cta-heading {
+    font-size: 2.2em;
+    color: #e67e22; /* Carrot Orange */
+    margin-bottom: 20px;
+}
+
+#ml-cta .ml-cta-description {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Gray */
+    margin-bottom: 20px;
+}
+
+#ml-cta .ml-cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #3498db; /* Bright Blue */
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#ml-cta .ml-cta-button:hover {
+    background-color: #2980b9; /* Darker Blue */
+}
+
+/* End of Machine Learning */
