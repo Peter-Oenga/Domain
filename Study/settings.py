@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1xiqfyt!d)mp*=wgwwo#unz*y6yjdx_yozg)w05*_8cl%g5nf7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['71e0-197-231-180-142.ngrok-free.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['study-mart.onrender.com', 'localhost', '127.0.0.1']
 
 
 
