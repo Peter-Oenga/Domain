@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="academic-work-container">
+    <!-- Introduction Section -->
+    <section id="academic-intro">
+        <h1 class="academic-intro-heading">Master Your Academic Journey</h1>
+        <p class="academic-intro-description">
+            Whether you’re working on a thesis, dissertation, capstone project, or term paper, we offer expert guidance and resources to help you succeed. Explore our comprehensive support services tailored to meet the demands of your academic work.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="academic-services">
+        <h2 class="academic-services-heading">Our Academic Services</h2>
+        <h3 class="academic-services-subheading">Comprehensive Support for Your Academic Endeavors</h3>
+        
+        <div class="academic-services-grid">
+            <div class="academic-service-card">
+                <h4 class="academic-service-title">Thesis Development</h4>
+                <p class="academic-service-description">Expert assistance in crafting a well-researched thesis that meets your academic requirements. From topic selection to final revisions, we guide you through every step of the process.</p>
+            </div>
+            <div class="academic-service-card">
+                <h4 class="academic-service-title">Dissertation Support</h4>
+                <p class="academic-service-description">Receive comprehensive support for your dissertation, including research design, data analysis, and writing. Our experts help ensure your dissertation stands out in academic circles.</p>
+            </div>
+            <div class="academic-service-card">
+                <h4 class="academic-service-title">Capstone Projects</h4>
+                <p class="academic-service-description">Get tailored assistance for your capstone project, combining practical and theoretical knowledge. We help you create a compelling project that demonstrates your expertise and skills.</p>
+            </div>
+            <div class="academic-service-card">
+                <h4 class="academic-service-title">Term Papers</h4>
+                <p class="academic-service-description">Support for writing impactful term papers, including research, structure, and presentation. Our guidance ensures your term papers are well-organized and academically rigorous.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="academic-resources">
+        <h2 class="academic-resources-heading">Resources & Tools</h2>
+        <p class="academic-resources-description">
+            Access a wide range of resources, including research tools, writing guides, and sample papers, to support your academic work. Equip yourself with the best tools and knowledge to excel in your projects.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="academic-cta">
+        <h2 class="academic-cta-heading">Start Your Academic Journey with Us</h2>
+        <p class="academic-cta-description">
+            Connect with us today to receive expert guidance and support for your academic work. Let’s work together to achieve excellence in your thesis, dissertation, capstone, or term paper.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=18438437046" class="academic-cta-button">Get in Touch</a>
+    </section>
+</div>
+
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Container Styles */
+.academic-work-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Introduction Section */
+#academic-intro {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.academic-intro-heading {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.academic-intro-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Services Section */
+#academic-services {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.academic-services-heading {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.academic-services-subheading {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.academic-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.academic-service-card {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.academic-service-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.academic-service-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Resources Section */
+#academic-resources {
+    padding: 40px 20px;
+    background-color: #eaf2f8;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.academic-resources-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.academic-resources-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+#academic-cta {
+    padding: 40px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.academic-cta-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.academic-cta-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.academic-cta-button {
+    background-color: #fff;
+    color: #4a90e2;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.academic-cta-button:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .academic-service-card {
+        width: 100%;
+    }
+}
+</style>
+{% endblock %}

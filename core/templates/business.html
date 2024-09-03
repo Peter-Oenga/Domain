@@ -1,6 +1,161 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    Expert Business Services
+{% endblock %}
+
 {% block content %}
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container Styles */
+.business-container {
+    background: #ffffff;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Introduction Section */
+#business-intro {
+    background: #003366; /* Deep Blue */
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.business-intro-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.business-intro-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: black;
+}
+
+/* Services Section */
+#business-services {
+    padding: 40px 20px;
+}
+
+.business-services-heading {
+    font-size: 2.2em;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.business-services-subheading {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.business-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.business-service-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.business-service-title {
+    font-size: 1.8em;
+    color: #003366; /* Deep Blue */
+    margin-bottom: 15px;
+}
+
+.business-service-description {
+    font-size: 1.1em;
+    color: white;
+}
+
+/* Contact Section */
+#business-cta {
+    background: #003366; /* Deep Blue */
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.business-cta-heading {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.business-cta-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.business-cta-button {
+    background: #ffffff;
+    color: #003366; /* Deep Blue */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #003366; /* Deep Blue */
+    transition: background 0.3s, color 0.3s;
+}
+
+.business-cta-button:hover {
+    background: #003366; /* Deep Blue */
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .business-intro-heading {
+        font-size: 2em;
+    }
+
+    .business-intro-description {
+        font-size: 1em;
+    }
+
+    .business-services-heading, .business-cta-heading {
+        font-size: 1.8em;
+    }
+
+    .business-services-subheading {
+        font-size: 1.3em;
+    }
+}
+</style>
+
 <div class="business-container">
     <!-- Introduction Section -->
     <section id="business-intro">
@@ -40,6 +195,14 @@
                 <h4 class="business-service-title">Comprehensive Reports</h4>
                 <p class="business-service-description">In-depth reports providing insights and analysis for informed decision-making.</p>
             </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Business Administration</h4>
+                <p class="business-service-description">Comprehensive administration services to streamline business processes and enhance productivity.</p>
+            </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Management</h4>
+                <p class="business-service-description">Expert advice on effective management practices to lead teams and projects successfully.</p>
+            </div>
         </div>
     </section>
 
@@ -49,7 +212,8 @@
         <p class="business-cta-description">
             Contact us today to get started with our expert business services and drive your success.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=254737988992" class="business-cta-button">Get in Touch</a>
+        <a href="https://api.whatsapp.com/send?phone=18438437046" class="business-cta-button">Get in Touch</a>
     </section>
 </div>
+
 {% endblock %}

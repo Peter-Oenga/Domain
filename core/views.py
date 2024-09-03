@@ -64,3 +64,6 @@ def business(request):
 
 def marketing(request):
     return render(request, 'marketing.html')
+
+def research(request):
+    return render(request, 'research.html')

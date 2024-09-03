@@ -5,33 +5,175 @@
 {% endblock %}
 
 {% block content %}
-<section class="data-analysis-section">
-    <div class="overlay"></div>
-    <div class="container">
-        <h1 class="section-title">Your Path to Academic Excellence in Data Analysis</h1>
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container Styles */
+.data-analysis-container {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+/* Section Title and Description */
+.section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-description {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item, .resources-item {
+    background: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.service-item h2, .resources-item h2 {
+    font-size: 1.8em;
+    color: #1E90FF;
+    margin-bottom: 15px;
+}
+
+.service-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.service-item li {
+    margin-bottom: 10px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: #1E90FF;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.cta-button:hover {
+    background-color: #4682B4;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .service-item, .resources-item {
+        max-width: 100%;
+    }
+}
+</style>
+
+<div class="data-analysis-container">
+    <!-- Introduction Section -->
+    <section id="da-intro">
+        <h1 class="section-title">Achieve Excellence in Data Analysis</h1>
         <p class="section-description">
-            Achieve mastery in data analysis with our expert services. We offer comprehensive support in:
+            Master the art of data analysis with our comprehensive services and expert support. We provide a range of tools and techniques to elevate your academic and research projects.
         </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="da-services">
+        <h2 class="section-title">Our Data Analysis Services</h2>
+        
         <div class="services">
+            <!-- Service Cards -->
             <div class="service-item">
-                <h2>Our Services</h2>
-                <ul>
-                    <li>SPSS</li>
-                    <li>STATA</li>
-                    <li>R</li>
-                    <li>Python</li>
-                    <li>Jamovi</li>
-                    <li>Data Visualization</li>
-                    <li>Reports</li>
-                    <li>Research Reviews</li>
-                </ul>
+                <h2>SPSS</h2>
+                <p>Utilize SPSS for statistical analysis and data management, enhancing your research capabilities.</p>
             </div>
-            <div class="resources-item">
-                <h2>Resources</h2>
-                <p>Find the best study materials, guides, and articles to excel in Data Analysis.</p>
+            <div class="service-item">
+                <h2>STATA</h2>
+                <p>Use STATA for advanced statistical analysis and data visualization.</p>
             </div>
-        </div>
-        <a href="https://api.whatsapp.com/send?phone=254737988992" class="cta-button">Contact Us for Support</a>
+            <div class="service-item">
+                <h2>R</h2>
+                <p>Leverage R for comprehensive statistical analysis and data visualization.</p>
+            </div>
+            <div class="service-item">
+                <h2>Python</h2>
+                <p>Employ Python for robust data analysis and machine learning projects.</p>
+            </div>
+            <div class="service-item">
+                <h2>Jamovi</h2>
+                <p>Explore Jamovi for easy-to-use statistical analysis and visualization.</p>
+            </div>
+            <div class="service-item">
+                <h2>Data Visualization</h2>
+                <p>Create compelling data visualizations to present your analysis effectively.</p>
+            </div>
+            <div class="service-item">
+                <h2>Reports</h2>
+                <p>Generate detailed reports to summarize your data analysis findings.</p>
+            </div>
+            <div class="service-item">
+                <h2>Research Reviews</h2>
+                
+                    <p>Get expert reviews and feedback on your data analysis research.</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Contact Section -->
+        <section id="da-cta">
+            <h2 class="section-title">Get Expert Data Analysis Support Today</h2>
+            <p class="section-description">
+                Connect with us to explore our data analysis services and take your academic and research projects to the next level.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=18438437046" class="cta-button">Contact Us</a>
+        </section>
     </div>
-</section>
-{% endblock %}
+    {% endblock %}
+    
