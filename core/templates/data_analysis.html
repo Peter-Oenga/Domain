@@ -42,7 +42,7 @@ body {
 }
 
 /* Services Section */
-.services {
+.services, .resources {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -105,7 +105,7 @@ body {
         font-size: 1em;
     }
 
-    .services {
+    .services, .resources {
         flex-direction: column;
     }
 
@@ -160,20 +160,36 @@ body {
             </div>
             <div class="service-item">
                 <h2>Research Reviews</h2>
-                
-                    <p>Get expert reviews and feedback on your data analysis research.</p>
-                </div>
+                <p>Get expert reviews and feedback on your data analysis research.</p>
             </div>
-        </section>
+        </div>
+    </section>
     
-        <!-- Contact Section -->
-        <section id="da-cta">
-            <h2 class="section-title">Get Expert Data Analysis Support Today</h2>
-            <p class="section-description">
-                Connect with us to explore our data analysis services and take your academic and research projects to the next level.
-            </p>
-            <a href="https://api.whatsapp.com/send?phone=18438437046" class="cta-button">Contact Us</a>
-        </section>
-    </div>
-    {% endblock %}
-    
+    <!-- Resources Section -->
+    <section id="da-resources">
+        <h2 class="section-title">Downloadable Resources</h2>
+        <p class="section-description">Access important resources and materials to assist with your data analysis journey.</p>
+
+        <div class="resources">
+            {% for resource in documents %}
+            <div class="resources-item">
+                <h2>{{ resource.title }}</h2>
+                <p>{{ resource.description }}</p>
+                <a href="{{ resource.file.url }}" download class="cta-button">Download</a>
+            </div>
+            {% empty %}
+            <p>No resources available at the moment. Please check back later.</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="da-cta">
+        <h2 class="section-title">Get Expert Data Analysis Support Today</h2>
+        <p class="section-description">
+            Connect with us to explore our data analysis services and take your academic and research projects to the next level.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=18438437046" class="cta-button">Contact Us</a>
+    </section>
+</div>
+{% endblock %}

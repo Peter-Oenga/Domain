@@ -53,10 +53,22 @@
 
     <!-- Resources Section -->
     <section id="reports-resources">
-        <h2 class="reports-resources-heading">Resources</h2>
+        <h2 class="reports-resources-heading">Downloadable Resources</h2>
         <p class="reports-resources-description">
-            Find the best study materials, guides, and articles to excel in Report Writing.
+            Access valuable study materials and reports available for download.
         </p>
+
+        <!-- List of downloadable resources -->
+        <ul class="resources-list">
+            {% for resource in resources %}
+                <li class="resource-item">
+                    <strong>{{ resource.title }}</strong> - 
+                    <a href="{{ resource.file.url }}" download>Download</a>
+                </li>
+            {% empty %}
+                <li>No resources available at the moment. Please check back later.</li>
+            {% endfor %}
+        </ul>
     </section>
 </div>
 {% endblock %}

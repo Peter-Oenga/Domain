@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block content %}
-
 <div class="content-container">
     <!-- Background Image Section -->
     <section class="background-section">
@@ -14,13 +12,12 @@
             </p>
         </div>
     </section>
-    
-    
+
     <!-- Services Section -->
     <section class="services-section">
         <h2 class="services-title">Computer Science</h2>
         <h3 class="services-subtitle">Your Path to Academic Excellence in Computer Science</h3>
-        
+
         <div class="services-items">
             <div class="services-item">
                 <h4 class="services-item-title">Programming Languages</h4>
@@ -59,6 +56,21 @@
         <p class="resources-description">
             Find the best study materials, guides, and articles to excel in Computer Science.
         </p>
+    </section>
+
+    <!-- Document Listing Section -->
+    <section class="document-list-section">
+        <h2 class="document-list-title">Available Projects</h2>
+        <ul class="document-list">
+            {% for document in documents %}
+                <li>
+                    <a href="{{ document.file.url }}" download>{{ document.title }}</a> - Uploaded on {{ document.upload_date }}
+                    <p>{{ document.description }}</p>
+                </li>
+            {% empty %}
+                <p>No documents available for Computer Science.</p>
+            {% endfor %}
+        </ul>
     </section>
 </div>
 {% endblock %}

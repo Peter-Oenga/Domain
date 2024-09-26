@@ -60,6 +60,21 @@
         </div>
     </section>
 
+    <!-- Document Listing Section -->
+    <section class="document-list-section">
+        <h2 class="document-list-title">Available Documents</h2>
+        <ul class="document-list">
+            {% for document in documents %}
+                <li>
+                    <a href="{{ document.file.url }}" download>{{ document.title }}</a> - Uploaded on {{ document.upload_date }}
+                    <p>{{ document.description }}</p>
+                </li>
+            {% empty %}
+                <p>No documents available for Machine Learning.</p>
+            {% endfor %}
+        </ul>
+    </section>
+
     <!-- Contact Section -->
     <section id="ml-cta">
         <h2 class="ml-cta-heading">Advance Your Machine Learning Skills Today</h2>

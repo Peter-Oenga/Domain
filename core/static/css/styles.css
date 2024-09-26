@@ -829,7 +829,7 @@ body {
 
 /* End of Data Analysis Section */
 
-/* Computer Science Section */
+/* Start of the Computer Science Section */
 
 /* General container */
 .content-container {
@@ -840,7 +840,6 @@ body {
 
 /* Background Image Section */
 .background-section {
-    /* background: url('/static/images/background-image.jpg') no-repeat center center; */
     background-image: url('/static/images/cs_back.jpg');
     background-size: cover;
     padding: 80px 20px;
@@ -850,6 +849,7 @@ body {
     min-height: 400px;
 }
 
+/* Background Content */
 .background-content {
     max-width: 800px;
     margin: 0 auto;
@@ -859,17 +859,128 @@ body {
 .background-title {
     font-size: 3.5em;
     margin-bottom: 20px;
-    color: white;
-    text-shadow: 2px 2px 4px white(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .background-description {
     font-size: 1.3em;
     line-height: 1.6;
-    color: #f0f0f0;
+    color: #e0e0e0; /* Soft gray for better readability */
 }
 
 /* Services Section */
+.services-section {
+    margin: 40px 0;
+}
+
+.services-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4db6e1; /* Soft blue */
+}
+
+.services-subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    color: #cfd8dc; /* Light gray */
+    margin-bottom: 30px;
+}
+
+/* Services Items */
+.services-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.services-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 30%; /* Adjust width as necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.services-item:hover {
+    transform: scale(1.05);
+}
+
+.services-item-title {
+    font-size: 1.5em;
+    color: #4db6e1; /* Soft blue */
+}
+
+.services-item-description {
+    font-size: 1em;
+    color: black /* Soft gray */
+}
+
+/* Resources Section */
+.resources-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.resources-title {
+    font-size: 2em;
+    color: #4db6e1; /* Soft blue */
+}
+
+.resources-description {
+    font-size: 1.2em;
+    color: black; /* Light gray */
+}
+
+/* Document Listing Section */
+.document-list-section {
+    margin: 40px 0;
+}
+
+.document-list-title {
+    font-size: 2.5em;
+    text-align: center;
+    color: #4db6e1; /* Soft blue */
+    margin-bottom: 20px;
+}
+
+.document-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.document-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.document-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.document-list a {
+    color: #4db6e1; /* Soft blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.document-list a:hover {
+    text-decoration: underline;
+}
+
+.document-list p {
+    color: black; /* Light gray */
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
+
+
+/* Start of the Services Section */
 .services-section {
     background-color: #444;
     padding: 30px;
@@ -1086,6 +1197,7 @@ body {
 
 
 /* Start of the Business Analytics Section */
+
 #business-analytics-section {
     padding: 60px 20px;
     background: #f8f9fa; /* Light Background */

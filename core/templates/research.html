@@ -43,6 +43,23 @@
         </p>
     </section>
 
+    <!-- Download Resources Section -->
+    <section id="academic-downloads">
+        <h2 class="academic-downloads-heading">Download Resources</h2>
+        <p class="academic-downloads-description">
+            Below are the downloadable resources you can use to assist you in your academic endeavors. Click on the links to download.
+        </p>
+        <ul class="academic-downloads-list">
+            {% for resource in resources %}
+                <li>
+                    <a href="{{ resource.file.url }}" class="academic-downloads-link" download>{{ resource.title }}</a>
+                </li>
+            {% empty %}
+                <li>No resources available for download at the moment.</li>
+            {% endfor %}
+        </ul>
+    </section>
+
     <!-- Contact Section -->
     <section id="academic-cta">
         <h2 class="academic-cta-heading">Start Your Academic Journey with Us</h2>
@@ -154,6 +171,39 @@ body {
 .academic-resources-description {
     font-size: 1.2em;
     line-height: 1.6;
+}
+
+/* Download Resources Section */
+#academic-downloads {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.academic-downloads-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.academic-downloads-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.academic-downloads-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.academic-downloads-link {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+.academic-downloads-link:hover {
+    text-decoration: none;
 }
 
 /* Contact Section */

@@ -31,7 +31,6 @@ body {
     color: #ffffff;
     padding: 40px 20px;
     border-radius: 12px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     margin-bottom: 40px;
     text-align: center;
 }
@@ -45,7 +44,7 @@ body {
 .business-intro-description {
     font-size: 1.2em;
     line-height: 1.6;
-    color: black;
+    color: #f9f9f9; /* Lighter shade for better contrast */
 }
 
 /* Services Section */
@@ -55,7 +54,7 @@ body {
 
 .business-services-heading {
     font-size: 2.2em;
-    color: white;
+    color: #003366;
     margin-bottom: 20px;
     font-weight: 700;
     text-align: center;
@@ -63,7 +62,7 @@ body {
 
 .business-services-subheading {
     font-size: 1.5em;
-    color: white;
+    color: #003366;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -94,7 +93,7 @@ body {
 
 .business-service-description {
     font-size: 1.1em;
-    color: white;
+    color: #333; /* Darker text for better readability */
 }
 
 /* Contact Section */
@@ -205,6 +204,21 @@ body {
             </div>
         </div>
     </section>
+
+    <!-- Downloadable Resources Section -->
+    <div class="download-section">
+        <h3>Downloadable Resources</h3>
+        <ul class="download-list">
+            {% for resource in resources %}
+                <li class="download-item">
+                    <span>{{ resource.title }}</span>
+                    <a href="{{ resource.file.url }}" class="download-btn" download>Download</a>
+                </li>
+            {% empty %}
+                <li>No resources available at the moment.</li>
+            {% endfor %}
+        </ul>
+    </div>
 
     <!-- Contact Section -->
     <section id="business-cta">

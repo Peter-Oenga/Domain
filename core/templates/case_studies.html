@@ -5,14 +5,177 @@
 {% endblock %}
 
 {% block content %}
+<style>
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#case-studies-section {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Intro Section */
+#intro-content {
+    background-color: #1E90FF;
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.intro-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.intro-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Case Studies and Insights */
+#case-studies-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.case-study-box, .insights-box {
+    flex: 1;
+    min-width: 300px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.case-study-heading, .insights-heading {
+    font-size: 2em;
+    color: #1E90FF;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.case-study-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.case-study-list li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Download Section */
+.download-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.download-list {
+    list-style: none;
+    padding: 0;
+}
+
+.download-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-item span {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.download-btn {
+    padding: 8px 16px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #1c7ed6;
+}
+
+/* CTA Button */
+.cta-button {
+    padding: 12px 24px;
+    background-color: #1E90FF;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #1c7ed6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #case-studies-content {
+        flex-direction: column;
+    }
+
+    .case-study-box, .insights-box {
+        margin-bottom: 20px;
+    }
+
+    .intro-heading {
+        font-size: 2em;
+    }
+
+    .intro-description, .case-study-heading, .insights-heading {
+        font-size: 1.5em;
+    }
+
+    .download-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+
 <section id="case-studies-section">
+    <!-- Intro Section -->
     <div id="intro-content">
         <h1 class="intro-heading">Explore Our Comprehensive Case Studies</h1>
         <p class="intro-description">
             Dive into our diverse range of Case Studies, including Business, Management, Marketing, and Economics. Our detailed reports provide valuable insights and practical solutions, offering a comprehensive analysis to enhance your understanding and drive strategic decisions.
         </p>
     </div>
+
+    <!-- Case Studies and Insights Section -->
     <div id="case-studies-content">
+        <!-- Case Studies Section -->
         <div class="case-study-box">
             <h2 class="case-study-heading">Our Case Studies</h2>
             <ul class="case-study-list">
@@ -22,13 +185,32 @@
                 <li>Economics Case Studies</li>
             </ul>
         </div>
+
+        <!-- Insights Section -->
         <div class="insights-box">
             <h2 class="insights-heading">Insights</h2>
             <p class="insights-description">
                 Access detailed reports and practical solutions to enhance your strategic decision-making process.
             </p>
+
+            <!-- Downloadable Resources Section -->
+            <div class="download-section">
+                <h3>Downloadable Resources</h3>
+                <ul class="download-list">
+                    {% for resource in resources %}
+                        <li class="download-item">
+                            <span>{{ resource.title }}</span>
+                            <a href="{{ resource.file.url }}" class="download-btn" download>Download</a>
+                        </li>
+                    {% empty %}
+                        <li>No resources available at the moment.</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
+
+    <!-- Call to Action -->
     <div id="cta-section">
         <a href="https://api.whatsapp.com/send?phone=18438437046" class="cta-button">Request More Information</a>
     </div>

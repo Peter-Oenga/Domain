@@ -108,6 +108,48 @@ body {
     line-height: 1.6;
 }
 
+.finance-resources-list {
+    margin-top: 20px;
+}
+
+.finance-resource-item {
+    background: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.finance-resource-item a {
+    color: #1E90FF;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.finance-resource-item a:hover {
+    text-decoration: underline;
+}
+
+/* Download Button Styles */
+.download-btn {
+    padding: 8px 16px;
+    background-color: #ffffff;;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #1c7ed6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .finance-background-title {
@@ -176,6 +218,18 @@ body {
         <p class="finance-resources-description">
             Explore our extensive library of study materials, guides, and articles to excel in finance and managerial accounting.
         </p>
+
+        <!-- Dynamic list of downloadable resources with download button -->
+        <div class="finance-resources-list">
+            {% for resource in documents %}
+                <div class="finance-resource-item">
+                    <span>{{ resource.title }}</span>
+                    <a href="{{ resource.file.url }}" class="download-btn" download>Download</a>
+                </div>
+            {% empty %}
+                <p>No resources available at the moment.</p>
+            {% endfor %}
+        </div>
     </section>
 </div>
 
