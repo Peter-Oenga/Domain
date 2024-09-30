@@ -1,6 +1,7 @@
 from django.db import models
 from . validators import validate_file_type, validate_file_size
 
+
 class User(models.Model):
     full_name = models.CharField(max_length=100)
     username = models.CharField(max_length=100, unique=True)

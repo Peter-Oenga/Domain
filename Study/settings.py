@@ -34,13 +34,15 @@ ALLOWED_HOSTS = ['4d55-197-231-179-166.ngrok-free.app', 'study-mart.onrender.com
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    'core',
+    
 ]
 
 MIDDLEWARE = [
@@ -87,6 +89,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+
+#Jazmin settings
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Library Admin",
+    "site_header": "Library",
+    "site_logo": "{% static 'images/sTUdysmart.png' %}",
+    "welcome_sign": "Welcome to the library",
+}
+
+
 
 
 # Password validation
