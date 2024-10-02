@@ -1,5 +1,10 @@
 from django.shortcuts import render
 from .models import Document
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import UserRegisterForm
+from django.contrib.auth import authenticate, login
+
 
 # View for Index Page Documents
 def index(request):
@@ -17,9 +22,42 @@ def services(request):
     return render(request, 'services.html', {'documents': documents})
 
 # View for Register Page Documents
+# def register(request):
+#     documents = Document.objects.filter(page='register')
+#     return render(request, 'register.html', {'documents': documents})
+
+
 def register(request):
-    documents = Document.objects.filter(page='register')
-    return render(request, 'register.html', {'documents': documents})
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()  # Save the user to the database
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}!')
+            return redirect('index')  # Redirect to login page after successful registration
+    else:
+        form = UserRegisterForm()
+    return render(request, 'register.html', {'form': form})
+
+def login_page(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            if user.is_superuser:
+                return redirect('/admin/')
+            else:
+                return redirect('index')  # Redirect to the home page if login is successful
+
+                
+                
+        else:
+            messages.error(request, 'Invalid username or password')  # Show an error message
+
+    return render(request, 'login.html')
 
 # View for Reports Page Documents
 def reports(request):

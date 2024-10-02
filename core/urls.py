@@ -18,4 +18,5 @@ urlpatterns = [
     path('business/', views.business, name='business'),
     path('marketing/', views.marketing, name='marketing'),
     path('research/', views.research, name='research'),
+    path('login/', views.login_page, name='login'),
 ]

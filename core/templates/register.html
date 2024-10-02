@@ -12,6 +12,7 @@
   
   <!-- Inline CSS Styles -->
   <style>
+    /* Existing styles */
     * {
       margin: 0;
       padding: 0;
@@ -186,37 +187,46 @@
   <div class="container">
     <div class="title">Registration</div>
     <div class="content">
-      <form action="#">
+      <!-- Use Django form here -->
+      <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
         <div class="user-details">
+          {{ form.full_name.errors }}
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            {{ form.full_name }}
           </div>
+          {{ form.username.errors }}
           <div class="input-box">
             <span class="details">Username</span>
-            <input type="text" placeholder="Enter your username" required>
+            {{ form.username }}
           </div>
+          {{ form.email.errors }}
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            {{ form.email }}
           </div>
+          {{ form.phone_number.errors }}
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
+            {{ form.phone_number }}
           </div>
+          {{ form.password1.errors }}
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
+            {{ form.password1 }}
           </div>
+          {{ form.password2.errors }}
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required>
+            {{ form.password2 }}
           </div>
         </div>
         <div class="gender-details">
-          <input type="radio" name="gender" id="dot-1">
-          <input type="radio" name="gender" id="dot-2">
-          <input type="radio" name="gender" id="dot-3">
+          {{ form.gender.errors }}
+          <input type="radio" name="gender" id="dot-1" value="Male">
+          <input type="radio" name="gender" id="dot-2" value="Female">
+          <input type="radio" name="gender" id="dot-3" value="Prefer not to say">
           <span class="gender-title">Gender</span>
           <div class="category">
             <label for="dot-1">

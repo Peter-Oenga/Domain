@@ -26,10 +26,12 @@ SECRET_KEY = 'django-insecure-1xiqfyt!d)mp*=wgwwo#unz*y6yjdx_yozg)w05*_8cl%g5nf7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['4d55-197-231-179-166.ngrok-free.app', 'study-mart.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['a114-197-231-179-166.ngrok-free.app', 'study-mart.onrender.com', 'localhost', '127.0.0.1']
 
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://6ad6-154-159-254-222.ngrok-free.app',  # Add your ngrok URL here
+]
 
 # Application definition
 
@@ -95,10 +97,13 @@ DATABASES = {
 #Jazmin settings
 
 JAZZMIN_SETTINGS = {
-    "site_title": "Library Admin",
-    "site_header": "Library",
-    "site_logo": "{% static 'images/sTUdysmart.png' %}",
-    "welcome_sign": "Welcome to the library",
+    
+    "site_title": "Study Admin",
+    "site_header": "Study Smart",
+    
+    "welcome_sign": "Welcome to Study Smart",
+    "copyright": "StudySmart Ltd",
+    "search_model": ["auth.User", "auth.Group"],
 }
 
 
