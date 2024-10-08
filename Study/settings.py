@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1xiqfyt!d)mp*=wgwwo#unz*y6yjdx_yozg)w05*_8cl%g5nf7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['a114-197-231-179-166.ngrok-free.app', 'study-mart.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['study-mart-2.onrender.com', 'study-mart.onrender.com', 'localhost', '127.0.0.1']
 
 
 CSRF_TRUSTED_ORIGINS = [
