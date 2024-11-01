@@ -19,4 +19,8 @@ urlpatterns = [
     path('marketing/', views.marketing, name='marketing'),
     path('research/', views.research, name='research'),
     path('login/', views.login_page, name='login'),
+    path('exams/', views.exams, name='exams'),
+    path('assignment/', views.assignment, name='assignment'),
+    path('technical_writing/', views.technical_writing, name='technical_writing'),
+
 ]

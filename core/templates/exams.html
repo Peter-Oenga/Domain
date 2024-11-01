@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Academic Excellence in Economics
+    Exam Preparation Services
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@ body {
 }
 
 /* Container Styles */
-.economics-container {
+.exam-container {
     background: #ffffff;
     padding: 60px 20px;
     text-align: center;
@@ -41,15 +41,15 @@ body {
     margin-bottom: 40px;
 }
 
-/* Resources Section */
-.resources {
+/* Services Section */
+.services {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.resources-item {
+.service-item {
     background: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -59,13 +59,13 @@ body {
     max-width: 500px;
 }
 
-.resources-item h2 {
+.service-item h2 {
     font-size: 1.8em;
     color: #1E90FF;
     margin-bottom: 15px;
 }
 
-.resources-item p {
+.service-item p {
     font-size: 1.1em;
     color: #333;
 }
@@ -98,65 +98,62 @@ body {
         font-size: 1em;
     }
 
-    .resources {
+    .services {
         flex-direction: column;
     }
 
-    .resources-item {
+    .service-item {
         max-width: 100%;
     }
 }
 </style>
 
-<div class="economics-container">
+<div class="exam-container">
     <!-- Introduction Section -->
-    <section id="eco-intro">
-        <h1 class="section-title">Achieve Excellence</h1>
+    <section id="exam-intro">
+        <h1 class="section-title">Comprehensive Exam Preparation Services</h1>
         <p class="section-description">
-            Explore our collection of case studies showcasing real-world applications and insights across various fields, offering valuable lessons to enhance your understanding.
+            Our exam preparation services offer tailored support and resources to help you succeed in your academic assessments.
         </p>
     </section>
 
-    
-
-    <!-- Case Studies Section -->
-    <section id="case-studies">
-        <h2 class="section-title">Explore Our Case Studies</h2>
-        <p class="section-description">Our case studies include a variety of topics, but are not limited to...</p>
+    <!-- Services Section -->
+    <section id="exam-services">
+        <h2 class="section-title">Our Exam Services</h2>
         
-        <div class="resources">
-            <div class="resources-item">
-                <h2>Business Case Studies</h2>
-                <p>Explore real-world business challenges and strategies implemented for success.</p>
+        <div class="services">
+            <!-- Service Cards -->
+            <div class="service-item">
+                <h2>Mock Exams</h2>
+                <p>Participate in realistic mock exams to evaluate your knowledge and improve your exam techniques.</p>
             </div>
-            <div class="resources-item">
-                <h2>Management Case Studies</h2>
-                <p>Analyze effective management practices and their impact on organizational success.</p>
+            <div class="service-item">
+                <h2>Study Guides</h2>
+                <p>Access comprehensive study guides that summarize key concepts and provide practice questions.</p>
             </div>
-            <div class="resources-item">
-                <h2>Marketing Case Studies</h2>
-                <p>Discover innovative marketing strategies that have transformed brands and markets.</p>
+            <div class="service-item">
+                <h2>Exam Strategies</h2>
+                <p>Learn effective exam strategies to manage time and maximize performance on test day.</p>
             </div>
-            <div class="resources-item">
-                <h2>Economics Case Studies</h2>
-                <p>Understand economic theories and their practical applications in various scenarios.</p>
+            <div class="service-item">
+                <h2>Personal Tutoring</h2>
+                <p>Receive one-on-one tutoring from experienced educators who can address your specific needs.</p>
             </div>
-            <div class="resources-item">
-                <h2>Technology Case Studies</h2>
-                <p>Investigate how technology is shaping industries and driving innovation.</p>
+            <div class="service-item">
+                <h2>Resource Materials</h2>
+                <p>Get access to a wide range of resources including textbooks, articles, and online materials.</p>
             </div>
-            <div class="resources-item">
-                <h2>Environmental Case Studies</h2>
-                <p>Learn about sustainable practices and their implications for the environment.</p>
+            <div class="service-item">
+                <h2>Performance Analysis</h2>
+                <p>Benefit from detailed performance analysis and feedback after mock exams to identify areas for improvement.</p>
             </div>
         </div>
     </section>
 
-
     <!-- Resources Section -->
-    <section id="eco-resources">
-        <h2 class="section-title">Available Projects</h2>
-        <p class="section-description">Access important resources and materials to assist with your economics journey.</p>
+    <section id="exam-resources">
+        <h2 class="section-title">Available Exam Resources</h2>
+        <p class="section-description">Explore our collection of resources designed to enhance your exam preparation.</p>
 
         <div class="resources">
             {% for resource in documents %}
@@ -172,14 +169,12 @@ body {
     </section>
 
     <!-- Contact Section -->
-    <section id="eco-cta">
-        <h2 class="section-title">Get Expert Support Today</h2>
+    <section id="exam-cta">
+        <h2 class="section-title">Get Expert Exam Preparation Support Today</h2>
         <p class="section-description">
-            Connect with us to explore our resources and take your academic and research projects to the next level.
+            Connect with us to explore our exam preparation services and enhance your academic performance.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%2C%20I%20need%20help%20with%20Case%20Studies."
-   class="cta-button">Contact Us</a>
-
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%2C%20I%20need%20help%20with%20Exams." class="cta-button">Contact Us</a>
     </section>
 </div>
 {% endblock %}

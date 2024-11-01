@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Academic Excellence in Economics
+    Technical Writing Services
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@ body {
 }
 
 /* Container Styles */
-.economics-container {
+.technical-writing-container {
     background: #ffffff;
     padding: 60px 20px;
     text-align: center;
@@ -42,14 +42,14 @@ body {
 }
 
 /* Services Section */
-.services, .resources {
+.services {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.service-item, .resources-item {
+.service-item {
     background: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -59,22 +59,15 @@ body {
     max-width: 500px;
 }
 
-.service-item h2, .resources-item h2 {
+.service-item h2 {
     font-size: 1.8em;
     color: #1E90FF;
     margin-bottom: 15px;
 }
 
-.service-item ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.service-item p {
     font-size: 1.1em;
     color: #333;
-}
-
-.service-item li {
-    margin-bottom: 10px;
 }
 
 /* Call-to-Action Button */
@@ -105,70 +98,62 @@ body {
         font-size: 1em;
     }
 
-    .services, .resources {
+    .services {
         flex-direction: column;
     }
 
-    .service-item, .resources-item {
+    .service-item {
         max-width: 100%;
     }
 }
 </style>
 
-<div class="economics-container">
+<div class="technical-writing-container">
     <!-- Introduction Section -->
-    <section id="eco-intro">
-        <h1 class="section-title">Achieve Excellence in Economics</h1>
+    <section id="tech-intro">
+        <h1 class="section-title">Professional Technical Writing Services</h1>
         <p class="section-description">
-            Master the principles of economics with our comprehensive services and expert support. We provide a range of tools and techniques to elevate your academic and research projects.
+            Our technical writing services provide clear and concise documentation, tailored to your needs. We focus on delivering high-quality content that enhances understanding and usability.
         </p>
     </section>
 
     <!-- Services Section -->
-    <section id="eco-services">
-        <h2 class="section-title">Our Economics Services</h2>
+    <section id="tech-services">
+        <h2 class="section-title">Our Technical Writing Services</h2>
         
         <div class="services">
             <!-- Service Cards -->
             <div class="service-item">
-                <h2>Economic Analysis</h2>
-                <p>Conduct thorough economic analysis to understand market trends and inform decision-making.</p>
+                <h2>User Manuals</h2>
+                <p>Create comprehensive user manuals that guide users through complex processes and software applications.</p>
             </div>
             <div class="service-item">
-                <h2>Statistical Modeling</h2>
-                <p>Utilize statistical models to predict economic outcomes and assess risks.</p>
+                <h2>API Documentation</h2>
+                <p>Develop clear API documentation to help developers integrate and utilize your software effectively.</p>
             </div>
             <div class="service-item">
-                <h2>Market Research</h2>
-                <p>Perform in-depth market research to identify opportunities and challenges in various sectors.</p>
+                <h2>Technical Reports</h2>
+                <p>Draft detailed technical reports to present research findings, methodologies, and analysis.</p>
             </div>
             <div class="service-item">
-                <h2>Data Visualization</h2>
-                <p>Create impactful visualizations to effectively communicate economic data and findings.</p>
+                <h2>Instructional Guides</h2>
+                <p>Produce instructional guides that simplify complex tasks for end-users and technical staff.</p>
             </div>
             <div class="service-item">
-                <h2>Policy Analysis</h2>
-                <p>Analyze the impact of economic policies on different demographics and sectors.</p>
+                <h2>Policy Documents</h2>
+                <p>Create policy documents that communicate organizational policies clearly and effectively.</p>
             </div>
             <div class="service-item">
-                <h2>Financial Modeling</h2>
-                <p>Develop financial models to assist in budget forecasting and financial planning.</p>
-            </div>
-            <div class="service-item">
-                <h2>Reports and Publications</h2>
-                <p>Generate comprehensive reports and publications on economic research and findings.</p>
-            </div>
-            <div class="service-item">
-                <h2>Workshops and Training</h2>
-                <p>Attend workshops and training sessions to enhance your understanding of economics.</p>
+                <h2>Technical Articles</h2>
+                <p>Write technical articles for blogs and publications, showcasing industry expertise and insights.</p>
             </div>
         </div>
     </section>
-    
+
     <!-- Resources Section -->
-    <section id="eco-resources">
-        <h2 class="section-title">Available Projects</h2>
-        <p class="section-description">Access important resources and materials to assist with your economics journey.</p>
+    <section id="tech-resources">
+        <h2 class="section-title">Available Resources</h2>
+        <p class="section-description">Explore our collection of resources designed to support your technical writing needs.</p>
 
         <div class="resources">
             {% for resource in documents %}
@@ -184,12 +169,17 @@ body {
     </section>
 
     <!-- Contact Section -->
-    <section id="eco-cta">
-        <h2 class="section-title">Get Expert Economics Support Today</h2>
+    <section id="tech-cta">
+        <h2 class="section-title">Get Expert Technical Writing Support Today</h2>
         <p class="section-description">
-            Connect with us to explore our economics services and take your academic and research projects to the next level.
+            Connect with us to explore our technical writing services and enhance your documentation quality.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%2C%20I%20need%20help%20with%20Data%20Mining." class="cta-button">Contact Us</a>
+        <!-- <a href="https://api.whatsapp.com/send?phone=18438437046" class="cta-button">Contact Us</a> -->
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%2C%20I%20need%20help%20with%20the%20information%20on%20the%20Technical%20Writing%20page."
+   class="cta-button">Contact Us</a>
+
+
+     
     </section>
 </div>
 {% endblock %}

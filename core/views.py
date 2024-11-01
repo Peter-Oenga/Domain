@@ -118,3 +118,17 @@ def marketing(request):
 def research(request):
     documents = Document.objects.filter(page='research')
     return render(request, 'research.html', {'documents': documents})
+
+
+# View for the technical writing section
+
+def technical_writing(request):
+    return render(request, 'technical_writing.html', {})
+
+def exams(request):
+    return render(request, 'exams.html', {})
+
+
+
+def assignment(request):
+    return render(request, 'assignment.html', {})
