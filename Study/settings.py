@@ -26,12 +26,9 @@ SECRET_KEY = 'django-insecure-1xiqfyt!d)mp*=wgwwo#unz*y6yjdx_yozg)w05*_8cl%g5nf7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['study-mart-2.onrender.com', 'study-mart.onrender.com', 'localhost', '127.0.0.1', '2da3-197-231-179-166.ngrok-free.app']
+ALLOWED_HOSTS = ['study-mart-2.onrender.com','127.0.0.1', 'study-mart.onrender.com','6784-197-231-179-166.ngrok-free.app', 'studysmartexperts.com']
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://2da3-197-231-179-166.ngrok-free.app',  # Add your ngrok URL here
-]
 
 # Application definition
 
