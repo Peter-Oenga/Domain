@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1xiqfyt!d)mp*=wgwwo#unz*y6yjdx_yozg)w05*_8cl%g5nf7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['study-mart-2.onrender.com','127.0.0.1', 'study-mart.onrender.com','6784-197-231-179-166.ngrok-free.app', 'studysmartexperts.com']
+ALLOWED_HOSTS = ['study-mart-2.onrender.com','127.0.0.1', 'study-mart.onrender.com','153.92.210.185', 'studysmartexperts.com']
 
 
 
@@ -82,12 +82,25 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',      # Replace with your PostgreSQL database name
+        'USER': 'myuser',       # Replace with your PostgreSQL user
+        'PASSWORD': 'Monchy190.180.0',  # Replace with your PostgreSQL password
+        'HOST': 'localhost',          # Use 'localhost' if PostgreSQL is on the same server
+        'PORT': '5432',               # Default PostgreSQL port
     }
 }
+
+
 
 
 
