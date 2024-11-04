@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1xiqfyt!d)mp*=wgwwo#unz*y6yjdx_yozg)w05*_8cl%g5nf7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['study-mart-2.onrender.com','127.0.0.1', 'study-mart.onrender.com','153.92.210.185', 'studysmartexperts.com']
+ALLOWED_HOSTS = ['153.92.210.185', 'studysmartexperts.com']
 
 
 
