@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1xiqfyt!d)mp*=wgwwo#unz*y6yjdx_yozg)w05*_8cl%g5nf7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['153.92.210.185', 'studysmartexperts.com']
+ALLOWED_HOSTS = ['153.92.210.185', 'studysmartexperts.com', 'localhost', '127.0.0.1']
 
 
 
@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'mydatabase',      # Replace with your PostgreSQL database name
         'USER': 'myuser',       # Replace with your PostgreSQL user
         'PASSWORD': 'Monchy190.180.0',  # Replace with your PostgreSQL password
-        'HOST': 'localhost',          # Use 'localhost' if PostgreSQL is on the same server
+        'HOST': '153.92.210.185',          # Use 'localhost' if PostgreSQL is on the same server
         'PORT': '5432',               # Default PostgreSQL port
     }
 }
