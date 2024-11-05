@@ -82,23 +82,23 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',      # Replace with your PostgreSQL database name
-        'USER': 'myuser',       # Replace with your PostgreSQL user
-        'PASSWORD': 'Monchy190.180.0',  # Replace with your PostgreSQL password
-        'HOST': '153.92.210.185',          # Use 'localhost' if PostgreSQL is on the same server
-        'PORT': '5432',               # Default PostgreSQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'mydatabase',      # Replace with your PostgreSQL database name
+#         'USER': 'myuser',       # Replace with your PostgreSQL user
+#         'PASSWORD': 'Monchy190.180.0',  # Replace with your PostgreSQL password
+#         'HOST': '153.92.210.185',          # Use 'localhost' if PostgreSQL is on the same server
+#         'PORT': '5432',               # Default PostgreSQL port
+#     }
+# }
 
 
 
