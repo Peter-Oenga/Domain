@@ -980,6 +980,7 @@ body {
 }
 
 
+
 /* Start of the Services Section */
 .services-section {
     background-color: #444;
@@ -1179,6 +1180,11 @@ body {
 #data-mining-cta-section {
     text-align: center;
     margin-top: 40px;
+    color: #26d48c;
+}
+
+#data-mining-cta-section a {
+    color: black;
 }
 
 .data-mining-cta-button {
@@ -1275,7 +1281,7 @@ body {
     padding: 15px 30px;
     font-size: 1.2em;
     color: #ffffff; /* White */
-    background-color: #e67e22; /* Bright Orange */
+    /* background-color: #e67e22; Bright Orange */
     text-decoration: none;
     border-radius: 25px;
     transition: background-color 0.3s ease;
@@ -1369,15 +1375,18 @@ body {
     padding: 15px 30px;
     font-size: 1.2em;
     color: #ffffff; /* White */
-    background-color: #e67e22; /* Bright Orange */
+    background-color: #28a745; /* Bright Orange */
     text-decoration: none;
     border-radius: 25px;
-    transition: background-color 0.3s ease;
+    
+    transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:hover {
-    background-color: #d35400; /* Darker Orange on hover */
+    background-color: #007bff; /* Darker Orange on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+    transform: scale(1.05);
 }
 
 /* End of the Case Studies */
@@ -1617,8 +1626,8 @@ body {
     padding: 10px 20px;
     font-size: 1.2em;
     color: #fff;
-    background-color: #3498db; /* Bright Blue */
-    border-radius: 5px;
+    background-color: #28a745; /* Bright Blue */
+    border-radius: 30px;
     text-decoration: none;
 }
 
@@ -1743,12 +1752,12 @@ body {
 
 /* Responsive css page for the mobile */
 
-/* Carousel Content Styling */
 .carousel-content h3,
 .carousel-content h4,
 .carousel-content p {
   font-size: calc(1.2rem + 1vw);
   margin-bottom: 15px;
+  font-size: 70px;
 }
 
 .carousel-caption {
@@ -1816,6 +1825,7 @@ body {
   }
 }
 
+  
 /* Responsive section for the fact start */
 
 /* General Counter Section Styling */
@@ -1859,3 +1869,4 @@ body {
     }
   }
   
+/* 
